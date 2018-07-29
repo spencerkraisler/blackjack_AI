@@ -1,5 +1,5 @@
 # blackjack_AI
-A neural network created from my Simplex lbrary that can win and bet in Blackjack. 
+A neural network created from my Simplex library that can win and bet in Blackjack. 
 
 Open up terminal and run example.py to watch the AI learn Blackjack and play 10 games! Afterwards, the file offers a user interface to allow you to play 10 games, and then your scores and banks are compared. ;)
 
