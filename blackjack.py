@@ -177,7 +177,7 @@ class Player:
 			for games in range(5):
 				ave_reward += game(self, 4, False)
 			win_rate += 1.0 * self.wins / self.games
-			ave_bank += self.bank	
+			ave_bank += self.bank
 		win_rate /= rounds 
 		ave_bank /= rounds
 		ave_reward /= (rounds * 5)

@@ -18,10 +18,9 @@ from blackjack import game
 # constants
 GEN_SIZE = 20
 HIDDEN_LAYER_SIZE = 20
-DESIRED_WIN_RATE = 0.60
-MUTATION_RATE = 0.08
+MUTATION_RATE = 0.05
 
-# creating and training generation
+# create and train generation
 models = createGeneration(GEN_SIZE, HIDDEN_LAYER_SIZE)
 trainGeneration(models, 200, MUTATION_RATE, True)
 
@@ -29,16 +28,12 @@ trainGeneration(models, 200, MUTATION_RATE, True)
 gambling_addict = Player('AI', network=getMaxNetwork(models))
 kayli = Player('Kayli')
 
-
+# AI plays 10 games
+for i in range(10):
+	game(gambling_addict, 4, True)
+print(1.0 * gambling_addict.wins / gambling_addict.games, gambling_addict.bank)
 
 # user plays 10 games
 for i in range(10):
 	game(kayli, 4, True)
-
-# AI plays 10 games
-for i in range(10):
-	game(gambling_addict, 4, True)
-
-# print results
 print(1.0 * kayli.wins / kayli.games, kayli.bank)
-print(1.0 * gambling_addict.wins / gambling_addict.games, gambling_addict.bank)

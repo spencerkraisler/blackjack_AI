@@ -87,7 +87,7 @@ def trainGeneration(models, epoch, mutation_rate, print_info):
 		ave_bank = stats[1]
 		if print_info == True and i % 10 == 0: print("Epoch: " + str(i) + " - Win rate: " + str(round(win_rate * 100.0, 1)) + "% - Ave. bank (5 plays): $" + str(round(ave_bank, 2)))
 		for i in range(len(models)):
-			models[i] = mutateNetwork(max_network, mutation_rate * (0.70 - win_rate) / 0.70)
+			models[i] = mutateNetwork(max_network, mutation_rate * (0.60 - win_rate) / 0.60)
 
 
 
